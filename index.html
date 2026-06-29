@@ -13,30 +13,315 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&family=Spectral:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
   <style>
-    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:#f2ece0;color:#2a2723;font-family:'Hanken Grotesk',Arial,sans-serif} .serif{font-family:'Spectral',serif}.mono{font-family:'Space Mono',monospace}.wrap{max-width:1180px;margin:0 auto;padding-left:40px;padding-right:40px}.nav{position:sticky;top:0;z-index:10;background:rgba(242,236,224,.88);backdrop-filter:blur(10px);border-bottom:1px solid #e2d7c6}.navin{height:68px;display:flex;align-items:center;justify-content:space-between}.brand{display:flex;align-items:center;gap:11px}.dot{width:11px;height:11px;border-radius:50%;background:#bf6a4a}.brand-title{font-family:'Spectral',serif;font-size:18px;font-weight:500}.brand-sub{font-size:11px;letter-spacing:.1em;color:#a2967f;text-transform:uppercase;margin-left:10px}.navlinks{display:flex;align-items:center;gap:28px}.navlinks a{color:#5a5349;text-decoration:none;font-size:15px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;background:#bf6a4a;color:#fbf6ee;text-decoration:none;font-weight:650;border-radius:40px;border:0;transition:.18s;padding:18px 32px}.btn:hover{background:#a85838;transform:translateY(-1px)}.btn.small{font-size:14px;padding:10px 20px}.ghost{display:inline-flex;color:#2a2723;text-decoration:none;font-weight:550;border-bottom:1px solid rgba(42,39,35,.35);padding-bottom:2px}.hero{padding:84px 0 96px}.hero-grid{display:grid;grid-template-columns:1.22fr .82fr;gap:60px;align-items:center}.eyebrow{font-size:12px;letter-spacing:.14em;color:#bf6a4a;text-transform:uppercase;margin-bottom:28px}.h1{font-family:'Spectral',serif;font-weight:400;font-size:72px;line-height:1.02;letter-spacing:-.015em;margin:0 0 30px}.blur{filter:blur(6px);opacity:.5}.underline{font-style:italic;border-bottom:2px solid #bf6a4a;padding-bottom:3px}.lead{font-size:20px;line-height:1.55;color:#5a5349;max-width:36ch;margin:0 0 40px}.actions{display:flex;align-items:center;gap:20px;flex-wrap:wrap}.sheet{background:#fbf7f0;border:1px solid #e2d7c6;border-radius:8px;padding:30px 28px;box-shadow:0 24px 50px -28px rgba(80,60,40,.5)}.sheet-top{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:24px}.bar-label{font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#a2967f;margin-bottom:8px}.bar{height:8px;border-radius:4px;background:linear-gradient(90deg,#bf6a4a,#d89876)}.section{padding:104px 0;border-top:1px solid #e2d7c6}.sand{background:#eee7da}.dark{background:#221f1b;color:#ede7da}.two{display:grid;grid-template-columns:1fr 1fr;gap:32px}.intro-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:64px;align-items:center}.kicker{font-size:12px;letter-spacing:.12em;color:#a2967f;text-transform:uppercase;margin-bottom:22px}.dark .kicker{color:#d98a6a}.h2{font-family:'Spectral',serif;font-weight:400;font-size:46px;line-height:1.08;letter-spacing:-.01em;margin:0 0 24px}.text{font-size:18px;line-height:1.65;color:#5a5349}.dark .text{color:#a7a095}.chat{background:#f7f1e6;border:1px solid #e2d7c6;border-radius:10px;overflow:hidden;box-shadow:0 20px 44px -30px rgba(80,60,40,.4)}.chatbar{display:flex;gap:7px;padding:14px 18px;border-bottom:1px solid #e2d7c6}.chatdot{width:9px;height:9px;border-radius:50%;background:#d9cdba}.bubble-user{background:#e7d8c2;color:#6e5a44;font-size:14px;padding:10px 16px;border-radius:16px 16px 4px 16px;max-width:78%;margin-left:auto}.bubble-ai{background:#fff;border:1px solid #ece2d2;border-radius:4px 16px 16px 16px;padding:18px;max-width:90%;margin-top:18px}.card{background:#2a2723;border:1px solid #3a352e;border-radius:12px;padding:34px 32px}.after{background:linear-gradient(180deg,#33271f,#2a2017);border-color:#5a3d2c}.item{background:#221f1b;border-radius:8px;padding:14px 16px;color:#8a8174;font-size:15px;margin-top:12px}.after .item{background:rgba(217,138,106,.12);border:1px solid rgba(217,138,106,.3);color:#f2e6d8}.inside{display:grid;grid-template-columns:.8fr 1.2fr;gap:64px}.line{display:flex;gap:22px;padding:24px 0;border-bottom:1px solid #e2d7c6;align-items:baseline}.line:last-child{border-bottom:0}.num{font-size:13px;color:#bf6a4a;flex-shrink:0}.price{display:inline-flex;align-items:baseline;gap:10px;background:#fbf7f0;border:1px solid #e2d7c6;border-radius:10px;padding:18px 24px}.chips{display:flex;justify-content:center;align-items:center;gap:14px;flex-wrap:wrap}.chip{font-family:'Spectral',serif;font-size:26px;color:#2a2723}.sep{color:#bf6a4a;font-size:20px}.path{background:#fbf7f0;border:1px solid #e2d7c6;border-radius:14px;padding:40px 36px;display:flex;flex-direction:column}.path.darkpath{background:#2a2723;color:#ede7da;border-color:#2a2723}.list{display:flex;flex-direction:column;gap:11px;margin:0 0 30px}.li{display:flex;gap:10px;font-size:15px;color:#3a352e}.darkpath .li{color:#dcd5c9}.accent{color:#bf6a4a}.darkpath .accent{color:#d98a6a}.why{display:grid;grid-template-columns:.85fr 1.15fr;gap:60px;align-items:center}.photo{width:100%;aspect-ratio:4/5;border-radius:12px;display:flex;align-items:flex-end;padding:28px;background:linear-gradient(145deg,#2a2723 0%,#5a5349 52%,#d98a6a 100%);color:#fbf6ee;box-shadow:0 24px 50px -28px rgba(80,60,40,.5)}footer{background:#1a1815;color:#8a8174}.foot{padding-top:34px;padding-bottom:34px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px}.center{text-align:center}.mt{margin-top:44px}.final{padding:120px 0;text-align:center}.final .h2{font-size:56px;line-height:1.04;margin-left:auto;margin-right:auto;max-width:14ch}.muted{color:#6e665a}.dark .muted{color:#a7a095}@media(max-width:760px){.wrap{padding-left:20px;padding-right:20px}.navin{height:auto;padding-top:14px;padding-bottom:14px;align-items:flex-start;gap:14px}.navlinks{gap:12px;flex-wrap:wrap;justify-content:flex-end}.navlinks a:not(.btn){display:none}.hero{padding:64px 0 76px}.hero-grid,.intro-grid,.two,.inside,.why{grid-template-columns:1fr;gap:36px}.h1{font-size:44px;line-height:1.06}.h2{font-size:34px;line-height:1.12}.final .h2{font-size:38px}.section{padding:72px 0}.path{padding:30px 24px}.lead{font-size:18px}.btn{width:100%;padding-left:22px;padding-right:22px}.actions .ghost{margin:auto}.brand-sub{display:none}.chip{font-size:23px}}
+    *{box-sizing:border-box;}
+    html{scroll-behavior:smooth;}
+    body{margin:0;background:#F2ECE0;}
+    .mono{font-family:'Space Mono',monospace;}
+    .serif{font-family:'Spectral',serif;}
+    .stripe-ph{background-image:repeating-linear-gradient(135deg,rgba(120,90,60,.10) 0 9px,transparent 9px 18px);}
+    a.btn-primary:hover{background:#A85838;}
+    a.btn-ghost:hover{border-bottom-color:#2A2723;}
+    a.path-cta:hover{transform:translateY(-1px);}
+    @media (max-width:760px){
+      [style*="padding:18px 40px"]{padding:16px 20px!important;}
+      [style*="padding:84px 40px"]{padding:64px 20px 76px!important;}
+      [style*="padding:100px 40px"]{padding:72px 20px!important;}
+      [style*="padding:120px 40px"]{padding:72px 20px!important;}
+      [style*="padding:80px 40px"]{padding:64px 20px!important;}
+      [style*="grid-template-columns"]{grid-template-columns:1fr!important;}
+      [style*="font-size:72px"]{font-size:44px!important;line-height:1.06!important;}
+      [style*="font-size:52px"]{font-size:38px!important;line-height:1.08!important;}
+      [style*="font-size:46px"]{font-size:34px!important;line-height:1.12!important;}
+      [style*="font-size:30px"]{font-size:25px!important;}
+      [style*="gap:60px"]{gap:36px!important;}
+      [style*="gap:28px"]{gap:14px!important;flex-wrap:wrap!important;justify-content:flex-end!important;}
+      [style*="font-size:15px;"]{overflow-wrap:anywhere;}
+    }
   </style>
+
 </head>
-<body>
-  <nav class="nav"><div class="wrap navin"><div class="brand"><div class="dot"></div><span class="brand-title">ИИ-паспорт</span><span class="mono brand-sub">Веди Вайб</span></div><div class="navlinks"><a href="#inside">Что внутри</a><a href="#paths">Два пути</a><a class="btn small" href="https://t.me/vedi_vibe_ai_bot">Получить паспорт</a></div></div></nav>
+<body style="margin:0;padding:0;">
+  <div style="width:100%;background:#F2ECE0;font-family:'Hanken Grotesk',sans-serif;color:#2A2723;overflow-x:hidden;">
 
-  <main>
-    <section class="hero"><div class="wrap hero-grid"><div><div class="mono eyebrow">мини-продукт · 1 900 ₽</div><h1 class="h1">Из <span class="blur">размытости</span> —<br>в цифровую <span class="underline">форму</span>.</h1><p class="lead">ИИ отвечает шаблоном, пока не знает, кто вы. Паспорт помогает собрать ваш опыт, стиль и смысл в контекст, чтобы идеи рождались из вашей экспертности, а не из общих фраз.</p><div class="actions"><a class="btn" href="https://t.me/vedi_vibe_ai_bot">Получить паспорт <span style="opacity:.72;font-weight:400">· 1 900 ₽</span></a><a class="ghost" href="#paths">Концепт-сессия с Ириной</a></div></div><div><div class="sheet"><div class="sheet-top"><span class="serif" style="font-size:17px;font-weight:500">Мой контекст для ИИ</span><span class="mono" style="font-size:11px;color:#9a8f7e">35 / 35</span></div><div style="display:flex;flex-direction:column;gap:19px"><div><div class="mono bar-label">опыт</div><div class="bar" style="width:100%"></div></div><div><div class="mono bar-label">стиль</div><div class="bar" style="width:82%"></div></div><div><div class="mono bar-label">смысл</div><div class="bar" style="width:91%"></div></div><div><div class="mono bar-label">аудитория</div><div class="bar" style="width:74%"></div></div></div><div class="serif" style="margin-top:26px;padding-top:20px;border-top:1px dashed #e2d7c6"><span style="font-style:italic;font-size:16px;color:#6e665a">→ цифровой портрет экспертности</span></div></div><div class="mono" style="font-size:11px;color:#9a8f7e;margin-top:20px;letter-spacing:.04em">01 контекст → 02 форма → 03 продукт</div></div></div></section>
+  
 
-    <section class="section sand"><div class="wrap intro-grid"><div><div class="mono kicker">в чём дело</div><h2 class="h2">ИИ отвечает шаблоном, пока не знает, кто вы.</h2><p class="text">Вы спрашиваете “придумай мне продукт и тексты” и получаете ответ, как у всех. Не потому что ИИ слабый. А потому что он отвечает в пустоту: он не знает ни вашего опыта, ни голоса, ни смысла.</p></div><div class="chat"><div class="chatbar"><div class="chatdot"></div><div class="chatdot"></div><div class="chatdot"></div></div><div style="padding:22px 24px"><div class="bubble-user">Придумай мне продукт и тексты для запуска</div><div class="bubble-ai"><div class="mono" style="font-size:10px;letter-spacing:.1em;color:#b7a98f;text-transform:uppercase;margin-bottom:12px">типичный ответ</div><ul style="margin:0;padding-left:18px;color:#9a8f7e;font-size:15px;line-height:1.85"><li>Запустите марафон или интенсив</li><li>Сделайте бесплатный чек-лист</li><li>Проведите вебинар и продайте курс</li><li>Напишите 5 болей вашей аудитории</li></ul><div class="serif" style="margin-top:16px;padding-top:14px;border-top:1px dashed #ece2d2;font-size:14px;color:#b07a5e;font-style:italic">Это ответ не про вас. Это ответ про всех.</div></div></div></div></div></section>
+  <!-- ===== NAV ===== -->
+  <div style="position:sticky;top:0;z-index:50;background:rgba(242,236,224,.86);backdrop-filter:blur(10px);border-bottom:1px solid #E2D7C6;">
+    <div style="max-width:1180px;margin:0 auto;padding:18px 40px;display:flex;align-items:center;justify-content:space-between;">
+      <div style="display:flex;align-items:center;gap:11px;">
+        <div style="width:11px;height:11px;border-radius:50%;background:#BF6A4A;"></div>
+        <span class="serif" style="font-size:18px;font-weight:500;letter-spacing:.01em;">ИИ-паспорт</span><span style="font-size:11px;letter-spacing:.1em;color:#A2967F;text-transform:uppercase;margin-left:10px;font-family:monospace;">Веди Вайб</span>
+      </div>
+      <div style="display:flex;align-items:center;gap:28px;">
+        <a href="#chto-vnutri" style="text-decoration:none;color:#5A5349;font-size:15px;">Что внутри</a>
+        <a href="#dva-puti" style="text-decoration:none;color:#5A5349;font-size:15px;">Два пути</a>
+        <a href="https://t.me/vedi_vibe_ai_bot" class="btn-primary" style="text-decoration:none;background:#BF6A4A;color:#FBF6EE;font-weight:600;font-size:14px;padding:10px 20px;border-radius:30px;transition:background .2s;">Получить паспорт</a>
+      </div>
+    </div>
+  </div>
 
-    <section class="section dark"><div class="wrap"><div class="center" style="margin-bottom:64px"><div class="mono kicker">до · после</div><h2 class="h2" style="margin:0 auto;max-width:20ch">Сначала соберите себя в контекст. Потом просите ИИ создавать.</h2></div><div class="two"><div class="card"><div class="mono" style="font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#8a8174;margin-bottom:20px">до — пустой запрос</div><p class="text" style="margin:0 0 24px">“Придумай мне продукт”.</p><div class="item">Очередной марафон “как у всех”</div><div class="item">Тексты, которые можно отдать кому угодно</div><div class="item">Идеи без вашего голоса и смысла</div></div><div class="card after"><div class="mono" style="font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#e3a07f;margin-bottom:20px">после — запрос с контекстом</div><p style="font-size:16px;line-height:1.7;color:#ede0d2;margin:0 0 24px">“Вот мой контекст. Предложи продукт из моего опыта”.</p><div class="item">Идея, собранная из ваших кейсов</div><div class="item">Тексты вашим голосом и интонацией</div><div class="item">Оффер, который узнаётся как ваш</div></div></div><p class="center" style="margin:48px auto 0;font-size:17px;color:#a7a095;max-width:46ch">Разница не в волшебной команде. Разница в том, насколько точно вы описали себя.</p></div></section>
+  <!-- ===== HERO ===== -->
+  <section style="max-width:1180px;margin:0 auto;padding:84px 40px 96px;">
+    <div style="display:grid;grid-template-columns:1.22fr .82fr;gap:60px;align-items:center;">
+      <div>
+        <div class="mono" style="font-size:12px;letter-spacing:.14em;color:#BF6A4A;text-transform:uppercase;margin-bottom:28px;">мини-продукт · 1 900 ₽</div>
+        <h1 class="serif" style="font-weight:400;font-size:72px;line-height:1.02;letter-spacing:-.015em;margin:0 0 30px;">
+          Из <span style="filter:blur(6px);opacity:.5;">размытости</span> —<br>в цифровую <span style="font-style:italic;border-bottom:2px solid #BF6A4A;padding-bottom:3px;">форму</span>.
+        </h1>
+        <p style="font-size:20px;line-height:1.55;color:#5A5349;max-width:34ch;margin:0 0 40px;text-wrap:pretty;">
+          ИИ отвечает шаблоном, пока не знает, кто вы. Паспорт помогает собрать ваш опыт, стиль и смысл в контекст — чтобы идеи рождались из вашей экспертности, а не из общих фраз.
+        </p>
+        <div style="display:flex;align-items:center;gap:20px;flex-wrap:wrap;">
+          <a href="https://t.me/vedi_vibe_ai_bot" class="btn-primary" style="display:inline-flex;align-items:center;gap:12px;background:#BF6A4A;color:#FBF6EE;text-decoration:none;font-weight:600;font-size:17px;padding:18px 32px;border-radius:40px;transition:background .2s;">Получить паспорт <span style="opacity:.72;font-weight:400;">· 1 900 ₽</span></a>
+          <a href="#dva-puti" class="btn-ghost" style="display:inline-flex;align-items:center;color:#2A2723;text-decoration:none;font-weight:500;font-size:17px;border-bottom:1px solid rgba(42,39,35,.35);padding-bottom:2px;transition:border-color .2s;">Концепт-сессия с Ириной</a>
+        </div>
+      </div>
 
-    <section id="inside" class="section"><div class="wrap inside"><div><div class="mono kicker">что внутри</div><h2 class="h2">ИИ-паспорт</h2><p class="text" style="max-width:32ch">Самостоятельный набор, чтобы собрать сырьё своей экспертности и заговорить с ИИ на языке контекста.</p><div class="price"><span class="serif" style="font-size:34px;font-weight:500">1 900 ₽</span><span class="mono" style="font-size:12px;color:#9a8f7e">единоразово</span></div></div><div><div class="line"><span class="mono num">01</span><div><div class="serif" style="font-size:23px;margin-bottom:5px">Анкета на 35 вопросов</div><div class="muted">Вопросы, которые помогают увидеть то, что обычно остаётся невысказанным.</div></div></div><div class="line"><span class="mono num">02</span><div><div class="serif" style="font-size:23px;margin-bottom:5px">Шаблон “Мой контекст для ИИ”</div><div class="muted">Документ, который можно загрузить в любой ИИ, чтобы он начал говорить про вас, а не про всех.</div></div></div><div class="line"><span class="mono num">03</span><div><div class="serif" style="font-size:23px;margin-bottom:5px">Базовый запрос</div><div class="muted">Не волшебная кнопка, а точная точка входа: ИИ получает ваш контекст и перестаёт угадывать.</div></div></div><div class="line"><span class="mono num">04</span><div><div class="serif" style="font-size:23px;margin-bottom:5px">10 следующих вопросов к ИИ</div><div class="muted">Чтобы сразу двигаться дальше: продукт, оффер, страница, воронка и первые тексты.</div></div></div><div class="line"><span class="mono num">05</span><div><div class="serif" style="font-size:23px;margin-bottom:5px">Инструкция, что делать дальше</div><div class="muted">Куда нести паспорт, что спрашивать и как строить на этом продукт.</div></div></div></div></div></section>
+      <!-- context sheet artifact -->
+      <div>
+        <div style="background:#FBF7F0;border:1px solid #E2D7C6;border-radius:8px;padding:30px 28px;box-shadow:0 24px 50px -28px rgba(80,60,40,.5);">
+          <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:24px;">
+            <span class="serif" style="font-size:17px;font-weight:500;">Мой контекст для ИИ</span>
+            <span class="mono" style="font-size:11px;color:#9A8F7E;">35 / 35</span>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:19px;">
+            <div><div class="mono" style="font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#A2967F;margin-bottom:8px;">опыт</div><div style="height:8px;border-radius:4px;background:linear-gradient(90deg,#BF6A4A,#D89876);width:100%;"></div></div>
+            <div><div class="mono" style="font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#A2967F;margin-bottom:8px;">стиль</div><div style="height:8px;border-radius:4px;background:linear-gradient(90deg,#BF6A4A,#D89876);width:82%;"></div></div>
+            <div><div class="mono" style="font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#A2967F;margin-bottom:8px;">смысл</div><div style="height:8px;border-radius:4px;background:linear-gradient(90deg,#BF6A4A,#D89876);width:91%;"></div></div>
+            <div><div class="mono" style="font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#A2967F;margin-bottom:8px;">аудитория</div><div style="height:8px;border-radius:4px;background:linear-gradient(90deg,#BF6A4A,#D89876);width:74%;"></div></div>
+          </div>
+          <div style="margin-top:26px;padding-top:20px;border-top:1px dashed #E2D7C6;" class="serif"><span style="font-style:italic;font-size:16px;color:#6E665A;">→ цифровой портрет экспертности</span></div>
+        </div>
+        <div class="mono" style="font-size:11px;color:#9A8F7E;margin-top:20px;letter-spacing:.04em;">01 контекст → 02 форма → 03 продукт</div>
+      </div>
+    </div>
+  </section>
 
-    <section class="section sand"><div class="wrap center"><div class="mono kicker">что появляется</div><h2 class="h2" style="margin-left:auto;margin-right:auto;max-width:24ch">Ваш контекст в одном документе — и ИИ начинает работать на вас, а не на абстрактного эксперта.</h2><p class="text" style="margin:0 auto 44px;max-width:40ch">С ним можно строить:</p><div class="chips"><span class="chip">продукт</span><span class="sep">·</span><span class="chip">тексты</span><span class="sep">·</span><span class="chip">сайт</span><span class="sep">·</span><span class="chip">воронку</span><span class="sep">·</span><span class="chip">бота</span></div></div></section>
+  <!-- ===== ПРОБЛЕМА ===== -->
+  <section style="border-top:1px solid #E2D7C6;background:#EEE7DA;">
+    <div style="max-width:1180px;margin:0 auto;padding:104px 40px;">
+      <div style="display:grid;grid-template-columns:.95fr 1.05fr;gap:64px;align-items:center;">
+        <div>
+          <div class="mono" style="font-size:12px;letter-spacing:.12em;color:#A2967F;text-transform:uppercase;margin-bottom:22px;">в чём дело</div>
+          <h2 class="serif" style="font-weight:400;font-size:46px;line-height:1.08;letter-spacing:-.01em;margin:0 0 24px;">ИИ отвечает шаблоном, пока не знает, кто вы.</h2>
+          <p style="font-size:19px;line-height:1.6;color:#5A5349;max-width:38ch;margin:0;text-wrap:pretty;">
+            Вы спрашиваете «придумай мне продукт и тексты» — и получаете ответ, как у всех. Не потому что ИИ слабый. А потому что он отвечает в пустоту: он не знает ни вашего опыта, ни голоса, ни смысла.
+          </p>
+        </div>
 
-    <section id="paths" class="section"><div class="wrap"><div class="center" style="margin-bottom:56px"><div class="mono kicker">два пути</div><h2 class="h2" style="margin:0 auto;max-width:26ch">Можно собрать самой. А можно — вместе с Ириной.</h2></div><div class="two"><div class="path"><div class="mono" style="font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#a2967f;margin-bottom:16px">хочу сама</div><div class="serif" style="font-size:30px;font-weight:500;margin-bottom:6px">ИИ-паспорт</div><p class="muted">Пройти анкету, собрать контекст и начать работать с ИИ самостоятельно.</p><div class="list"><div class="li"><span class="accent">—</span>Анкета, шаблон контекста, базовый запрос</div><div class="li"><span class="accent">—</span>10 следующих вопросов к ИИ</div><div class="li"><span class="accent">—</span>Инструкция, что делать дальше</div></div><div style="margin-top:auto"><div style="display:flex;align-items:baseline;gap:10px;margin-bottom:20px"><span class="serif" style="font-size:34px;font-weight:500">1 900 ₽</span><span class="mono" style="font-size:12px;color:#9a8f7e">самостоятельно</span></div><a class="btn" style="display:flex" href="https://t.me/vedi_vibe_ai_bot">Получить паспорт</a></div></div><div class="path darkpath"><div class="mono" style="font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#d98a6a;margin-bottom:16px">собрать продукт вместе</div><div class="serif" style="font-size:30px;font-weight:500;margin-bottom:6px">Концепт-сессия</div><p style="color:#a7a095">Работаем вместе: вы рассказываете — я помогаю собрать из этого базу продукта, страницу, воронку и контекст для ИИ.</p><div class="list"><div class="li"><span class="accent">—</span>Кто вы как эксперт — формулируем честно и точно</div><div class="li"><span class="accent">—</span>Продуктовая идея, структура страницы и логика воронки</div><div class="li"><span class="accent">—</span>Сценарий бота и документ, с которым ИИ работает на вас</div></div><div style="margin-top:auto"><div style="display:flex;align-items:baseline;gap:10px;margin-bottom:20px"><span class="serif" style="font-size:34px;font-weight:500">50 000 ₽</span><span class="mono" style="font-size:12px;color:#9a8f7e">лично с Ириной</span></div><a class="btn" style="display:flex;background:transparent;border:1px solid #5a5349;color:#ede7da" href="https://t.me/vedi_vibe_ai_bot">Прийти на сессию</a></div></div></div><p class="serif center mt" style="font-size:18px;color:#6e665a"><span style="font-style:italic">ИИ-паспорт помогает собрать сырьё. Концепт-сессия превращает его в систему.</span></p></div></section>
+        <!-- generic answer demo -->
+        <div style="background:#F7F1E6;border:1px solid #E2D7C6;border-radius:10px;overflow:hidden;box-shadow:0 20px 44px -30px rgba(80,60,40,.4);">
+          <div style="display:flex;align-items:center;gap:7px;padding:14px 18px;border-bottom:1px solid #E2D7C6;">
+            <div style="width:9px;height:9px;border-radius:50%;background:#D9CDBA;"></div>
+            <div style="width:9px;height:9px;border-radius:50%;background:#D9CDBA;"></div>
+            <div style="width:9px;height:9px;border-radius:50%;background:#D9CDBA;"></div>
+          </div>
+          <div style="padding:22px 24px;">
+            <div style="display:flex;justify-content:flex-end;margin-bottom:18px;">
+              <span style="background:#E7D8C2;color:#6E5A44;font-size:14px;padding:10px 16px;border-radius:16px 16px 4px 16px;max-width:78%;">Придумай мне продукт и тексты для запуска</span>
+            </div>
+            <div style="background:#fff;border:1px solid #ECE2D2;border-radius:4px 16px 16px 16px;padding:18px 18px;max-width:90%;">
+              <div class="mono" style="font-size:10px;letter-spacing:.1em;color:#B7A98F;text-transform:uppercase;margin-bottom:12px;">типичный ответ</div>
+              <ul style="margin:0;padding-left:18px;color:#9A8F7E;font-size:15px;line-height:1.85;">
+                <li>Запустите марафон или интенсив</li>
+                <li>Сделайте бесплатный чек-лист</li>
+                <li>Проведите вебинар и продайте курс</li>
+                <li>Напишите 5 болей вашей аудитории</li>
+              </ul>
+              <div style="margin-top:16px;padding-top:14px;border-top:1px dashed #ECE2D2;font-size:14px;color:#B07A5E;font-style:italic;" class="serif">Это ответ не про вас. Это ответ про всех.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <section class="section sand"><div class="wrap why"><div class="photo"><div><div class="serif" style="font-size:30px;line-height:1.08;margin-bottom:10px">Ирина</div><div class="mono" style="font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:rgba(251,246,238,.68)">Веди Вайб</div></div></div><div><div class="mono kicker">почему Ирина</div><h2 class="h2">Я не про регалии. Я про то, чтобы вы увидели себя точнее.</h2><p class="text">Внутри много — опыта, смыслов, наработок. Но это сложно собрать в одну форму в одиночку. Я помогаю разобраться в том, что уже есть, и собрать из этого что-то рабочее.</p><div style="display:flex;flex-direction:column;gap:14px"><div><span class="accent serif">→</span> Веду спокойно, без давления и “купи курс по нейросетям”.</div><div><span class="accent serif">→</span> Мне важно, чтобы в итоге было что-то настоящее, а не просто красивое.</div><div><span class="accent serif">→</span> Помогаю не “разобраться с ИИ”, а собрать себя так, чтобы ИИ работал на вас.</div></div></div></div></section>
+  <!-- ===== ДО / ПОСЛЕ (dark) ===== -->
+  <section style="background:#221F1B;color:#EDE7DA;">
+    <div style="max-width:1180px;margin:0 auto;padding:108px 40px;">
+      <div style="text-align:center;margin-bottom:64px;">
+        <div class="mono" style="font-size:12px;letter-spacing:.14em;color:#D98A6A;text-transform:uppercase;margin-bottom:20px;">до · после</div>
+        <h2 class="serif" style="font-weight:400;font-size:48px;line-height:1.06;letter-spacing:-.01em;margin:0 auto;max-width:20ch;">Сначала соберите себя в&nbsp;контекст. Потом просите ИИ создавать.</h2>
+      </div>
 
-    <section class="dark final"><div class="wrap"><div class="mono kicker">первый шаг</div><h2 class="h2">Соберите себя в контекст. Дальше ИИ создаёт <span style="font-style:italic;color:#e3a07f">из этого</span>.</h2><p style="font-size:19px;line-height:1.6;color:#a7a095;max-width:42ch;margin:0 auto 44px">Начните с ИИ-паспорта за 1 900 ₽ — или приходите на Концепт-сессию, чтобы собрать всё вместе с Ириной.</p><div class="actions" style="justify-content:center"><a class="btn" href="https://t.me/vedi_vibe_ai_bot">Получить паспорт <span style="opacity:.72;font-weight:400">· 1 900 ₽</span></a><a href="#paths" style="color:#ede7da;text-decoration:none;font-weight:500;font-size:18px;border-bottom:1px solid rgba(237,231,218,.4);padding-bottom:2px">Концепт-сессия · 50 000 ₽</a></div><div class="mono" style="font-size:12px;color:#6e665a;margin-top:34px;letter-spacing:.05em">оплата и доступ — через Telegram-бота</div></div></section>
-  </main>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:32px;">
+        <!-- before -->
+        <div style="background:#2A2723;border:1px solid #3A352E;border-radius:12px;padding:34px 32px;">
+          <div class="mono" style="font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#8A8174;margin-bottom:20px;">до — пустой запрос</div>
+          <p style="font-size:16px;line-height:1.7;color:#A7A095;margin:0 0 24px;">«Придумай мне продукт».</p>
+          <div style="display:flex;flex-direction:column;gap:12px;">
+            <div style="background:#221F1B;border-radius:8px;padding:14px 16px;color:#8A8174;font-size:15px;">Очередной марафон «как у всех»</div>
+            <div style="background:#221F1B;border-radius:8px;padding:14px 16px;color:#8A8174;font-size:15px;">Тексты, которые можно отдать кому угодно</div>
+            <div style="background:#221F1B;border-radius:8px;padding:14px 16px;color:#8A8174;font-size:15px;">Идеи без вашего голоса и смысла</div>
+          </div>
+        </div>
 
-  <footer><div class="wrap foot"><div class="brand"><div class="dot" style="width:9px;height:9px"></div><span class="serif" style="font-size:15px;color:#c9c1b4">ИИ-паспорт</span></div><span class="mono" style="font-size:11px;letter-spacing:.05em">из размытости — в цифровую форму · Веди Вайб</span></div></footer>
+        <!-- after -->
+        <div style="background:linear-gradient(180deg,#33271F,#2A2017);border:1px solid #5A3D2C;border-radius:12px;padding:34px 32px;position:relative;">
+          <div class="mono" style="font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#E3A07F;margin-bottom:20px;">после — запрос с контекстом</div>
+          <p style="font-size:16px;line-height:1.7;color:#EDE0D2;margin:0 0 24px;">«Вот мой контекст. Предложи продукт из моего опыта».</p>
+          <div style="display:flex;flex-direction:column;gap:12px;">
+            <div style="background:rgba(217,138,106,.12);border:1px solid rgba(217,138,106,.3);border-radius:8px;padding:14px 16px;color:#F2E6D8;font-size:15px;">Идея, собранная из ваших кейсов</div>
+            <div style="background:rgba(217,138,106,.12);border:1px solid rgba(217,138,106,.3);border-radius:8px;padding:14px 16px;color:#F2E6D8;font-size:15px;">Тексты вашим голосом и интонацией</div>
+            <div style="background:rgba(217,138,106,.12);border:1px solid rgba(217,138,106,.3);border-radius:8px;padding:14px 16px;color:#F2E6D8;font-size:15px;">Оффер, который узнаётся как ваш</div>
+          </div>
+        </div>
+      </div>
+      <p style="text-align:center;margin:48px auto 0;font-size:17px;color:#A7A095;max-width:46ch;text-wrap:pretty;">Разница не в «волшебной команде». Разница в том, насколько точно вы описали себя.</p>
+    </div>
+  </section>
+
+  <!-- ===== ЧТО ВНУТРИ ===== -->
+  <section id="chto-vnutri" style="background:#F2ECE0;border-top:1px solid #E2D7C6;">
+    <div style="max-width:1180px;margin:0 auto;padding:108px 40px;">
+      <div style="display:grid;grid-template-columns:.8fr 1.2fr;gap:64px;">
+        <div>
+          <div class="mono" style="font-size:12px;letter-spacing:.12em;color:#A2967F;text-transform:uppercase;margin-bottom:22px;">что внутри</div>
+          <h2 class="serif" style="font-weight:400;font-size:46px;line-height:1.08;letter-spacing:-.01em;margin:0 0 24px;">ИИ-паспорт</h2>
+          <p style="font-size:18px;line-height:1.6;color:#5A5349;max-width:32ch;margin:0 0 30px;text-wrap:pretty;">Самостоятельный набор, чтобы собрать сырьё своей экспертности и заговорить с ИИ на языке контекста.</p>
+          <div style="display:inline-flex;align-items:baseline;gap:10px;background:#FBF7F0;border:1px solid #E2D7C6;border-radius:10px;padding:18px 24px;">
+            <span class="serif" style="font-size:34px;font-weight:500;">1 900 ₽</span>
+            <span class="mono" style="font-size:12px;color:#9A8F7E;">единоразово</span>
+          </div>
+        </div>
+
+        <div style="display:flex;flex-direction:column;">
+          <div style="display:flex;gap:22px;padding:24px 0;border-bottom:1px solid #E2D7C6;align-items:baseline;">
+            <span class="mono" style="font-size:13px;color:#BF6A4A;flex-shrink:0;">01</span>
+            <div><div class="serif" style="font-size:23px;margin-bottom:5px;">Анкета на 35 вопросов</div><div style="font-size:15px;color:#6E665A;">Вопросы, которые помогают увидеть то, что обычно остаётся невысказанным.</div></div>
+          </div>
+          <div style="display:flex;gap:22px;padding:24px 0;border-bottom:1px solid #E2D7C6;align-items:baseline;">
+            <span class="mono" style="font-size:13px;color:#BF6A4A;flex-shrink:0;">02</span>
+            <div><div class="serif" style="font-size:23px;margin-bottom:5px;">Шаблон «Мой контекст для ИИ»</div><div style="font-size:15px;color:#6E665A;">Документ, который можно скормить любому ИИ — и он начнёт говорить про вас, а не про всех.</div></div>
+          </div>
+          <div style="display:flex;gap:22px;padding:24px 0;border-bottom:1px solid #E2D7C6;align-items:baseline;">
+            <span class="mono" style="font-size:13px;color:#BF6A4A;flex-shrink:0;">03</span>
+            <div><div class="serif" style="font-size:23px;margin-bottom:5px;">Базовый запрос</div><div style="font-size:15px;color:#6E665A;">Не волшебная кнопка, а точная точка входа: ИИ получает ваш контекст и перестает угадывать.</div></div>
+          </div>
+          <div style="display:flex;gap:22px;padding:24px 0;border-bottom:1px solid #E2D7C6;align-items:baseline;">
+            <span class="mono" style="font-size:13px;color:#BF6A4A;flex-shrink:0;">04</span>
+            <div><div class="serif" style="font-size:23px;margin-bottom:5px;">10 следующих вопросов к ИИ</div><div style="font-size:15px;color:#6E665A;">Чтобы сразу двигаться дальше: продукт, оффер, страница, воронка и первые тексты.</div></div>
+          </div>
+          <div style="display:flex;gap:22px;padding:24px 0;align-items:baseline;">
+            <span class="mono" style="font-size:13px;color:#BF6A4A;flex-shrink:0;">05</span>
+            <div><div class="serif" style="font-size:23px;margin-bottom:5px;">Инструкция, что делать дальше</div><div style="font-size:15px;color:#6E665A;">Что делать с паспортом дальше: куда нести, что спрашивать, как строить на этом продукт.</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ЧТО ПОЯВЛЯЕТСЯ ===== -->
+  <section style="background:#EEE7DA;border-top:1px solid #E2D7C6;">
+    <div style="max-width:1180px;margin:0 auto;padding:96px 40px;text-align:center;">
+      <div class="mono" style="font-size:12px;letter-spacing:.12em;color:#A2967F;text-transform:uppercase;margin-bottom:22px;">что у вас появляется</div>
+      <h2 class="serif" style="font-weight:400;font-size:44px;line-height:1.12;letter-spacing:-.01em;margin:0 auto 18px;max-width:24ch;">Ваш контекст в одном документе — и ИИ начинает работать на вас, а не на абстрактного эксперта.</h2>
+      <p style="font-size:18px;color:#6E665A;max-width:40ch;margin:0 auto 44px;">С ним можно строить:</p>
+      <div style="display:flex;justify-content:center;align-items:center;gap:14px;flex-wrap:wrap;">
+        <span class="serif" style="font-size:26px;color:#2A2723;">продукт</span><span style="color:#BF6A4A;font-size:20px;">·</span>
+        <span class="serif" style="font-size:26px;color:#2A2723;">тексты</span><span style="color:#BF6A4A;font-size:20px;">·</span>
+        <span class="serif" style="font-size:26px;color:#2A2723;">сайт</span><span style="color:#BF6A4A;font-size:20px;">·</span>
+        <span class="serif" style="font-size:26px;color:#2A2723;">воронку</span><span style="color:#BF6A4A;font-size:20px;">·</span>
+        <span class="serif" style="font-size:26px;color:#2A2723;">бота</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ДВА ПУТИ ===== -->
+  <section id="dva-puti" style="background:#F2ECE0;border-top:1px solid #E2D7C6;">
+    <div style="max-width:1180px;margin:0 auto;padding:108px 40px;">
+      <div style="text-align:center;margin-bottom:56px;">
+        <div class="mono" style="font-size:12px;letter-spacing:.12em;color:#A2967F;text-transform:uppercase;margin-bottom:20px;">два пути</div>
+        <h2 class="serif" style="font-weight:400;font-size:46px;line-height:1.08;letter-spacing:-.01em;margin:0 auto;max-width:26ch;">Можно собрать самой. А можно — вместе с Ириной.</h2>
+      </div>
+
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:stretch;">
+        <!-- self -->
+        <div style="background:#FBF7F0;border:1px solid #E2D7C6;border-radius:14px;padding:40px 36px;display:flex;flex-direction:column;">
+          <div class="mono" style="font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#A2967F;margin-bottom:16px;">хочу сама</div>
+          <div class="serif" style="font-size:30px;font-weight:500;margin-bottom:6px;">ИИ-паспорт</div>
+          <div style="font-size:15px;color:#6E665A;margin-bottom:24px;">Пройти анкету, собрать контекст и начать работать с ИИ самостоятельно.</div>
+          <div style="display:flex;flex-direction:column;gap:11px;margin-bottom:30px;">
+            <div style="display:flex;gap:10px;font-size:15px;color:#3A352E;"><span style="color:#BF6A4A;">—</span>Анкета, шаблон контекста, базовый запрос</div>
+            <div style="display:flex;gap:10px;font-size:15px;color:#3A352E;"><span style="color:#BF6A4A;">—</span>10 следующих вопросов к ИИ</div>
+            <div style="display:flex;gap:10px;font-size:15px;color:#3A352E;"><span style="color:#BF6A4A;">—</span>Инструкция, что делать дальше</div>
+          </div>
+          <div style="margin-top:auto;">
+            <div style="display:flex;align-items:baseline;gap:10px;margin-bottom:20px;"><span class="serif" style="font-size:34px;font-weight:500;">1 900 ₽</span><span class="mono" style="font-size:12px;color:#9A8F7E;">самостоятельно</span></div>
+            <a href="https://t.me/vedi_vibe_ai_bot" class="path-cta btn-primary" style="display:block;text-align:center;background:#BF6A4A;color:#FBF6EE;text-decoration:none;font-weight:600;font-size:16px;padding:16px;border-radius:40px;transition:background .2s,transform .15s;">Получить паспорт</a>
+          </div>
+        </div>
+
+        <!-- with Irina -->
+        <div style="background:#2A2723;color:#EDE7DA;border:1px solid #2A2723;border-radius:14px;padding:40px 36px;display:flex;flex-direction:column;">
+          <div class="mono" style="font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#D98A6A;margin-bottom:16px;">собрать продукт вместе</div>
+          <div class="serif" style="font-size:30px;font-weight:500;margin-bottom:6px;">Концепт-сессия</div>
+          <div style="font-size:15px;color:#A7A095;margin-bottom:24px;">Работаем вместе: вы рассказываете — я помогаю собрать из этого базу продукта, страницу, воронку и контекст для ИИ.</div>
+          <div style="display:flex;flex-direction:column;gap:11px;margin-bottom:30px;">
+            <div style="display:flex;gap:10px;font-size:15px;color:#DCD5C9;"><span style="color:#D98A6A;">—</span>Кто вы как эксперт — формулируем честно и точно</div>
+            <div style="display:flex;gap:10px;font-size:15px;color:#DCD5C9;"><span style="color:#D98A6A;">—</span>Продуктовая идея, структура страницы и логика воронки</div>
+            <div style="display:flex;gap:10px;font-size:15px;color:#DCD5C9;"><span style="color:#D98A6A;">—</span>Сценарий бота и документ, с которым ИИ работает на вас</div>
+          </div>
+          <div style="margin-top:auto;">
+            <div style="display:flex;align-items:baseline;gap:10px;margin-bottom:20px;"><span class="serif" style="font-size:34px;font-weight:500;">50 000 ₽</span><span class="mono" style="font-size:12px;color:#9A8F7E;">лично с Ириной</span></div>
+            <a href="https://t.me/vedi_vibe_ai_bot" class="path-cta" style="display:block;text-align:center;background:transparent;color:#EDE7DA;text-decoration:none;font-weight:600;font-size:16px;padding:16px;border:1px solid #5A5349;border-radius:40px;transition:transform .15s;">Прийти на сессию</a>
+          </div>
+        </div>
+      </div>
+      <p style="text-align:center;margin:44px auto 0;font-size:18px;color:#6E665A;max-width:48ch;text-wrap:pretty;" class="serif"><span style="font-style:italic;">ИИ-паспорт помогает собрать сырьё. Концепт-сессия превращает его в систему.</span></p>
+    </div>
+  </section>
+
+  <!-- ===== ПОЧЕМУ ИРИНА ===== -->
+  <section style="background:#EEE7DA;border-top:1px solid #E2D7C6;">
+    <div style="max-width:1180px;margin:0 auto;padding:108px 40px;">
+      <div style="display:grid;grid-template-columns:.85fr 1.15fr;gap:60px;align-items:center;">
+        <div>
+          <img src="assets/irina-site-photo.jpg" alt="Ирина Веди Вайб" style="width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:12px;display:block;box-shadow:0 24px 50px -28px rgba(80,60,40,.5);">
+        </div>
+        <div>
+          <div class="mono" style="font-size:12px;letter-spacing:.12em;color:#A2967F;text-transform:uppercase;margin-bottom:22px;">почему Ирина</div>
+          <h2 class="serif" style="font-weight:400;font-size:42px;line-height:1.12;letter-spacing:-.01em;margin:0 0 26px;">Я не про регалии. Я про то, чтобы вы увидели себя точнее.</h2>
+          <p style="font-size:18px;line-height:1.65;color:#5A5349;max-width:46ch;margin:0 0 30px;text-wrap:pretty;">
+            Внутри много — опыта, смыслов, наработок. Но это сложно собрать в одну форму в одиночку. Я помогаю разобраться в том, что уже есть — и собрать из этого что-то рабочее.
+          </p>
+          <div style="display:flex;flex-direction:column;gap:14px;">
+            <div style="display:flex;gap:12px;align-items:baseline;"><span style="color:#BF6A4A;" class="serif">→</span><span style="font-size:16px;color:#3A352E;">Веду спокойно, без давления и «купи курс по нейросетям».</span></div>
+            <div style="display:flex;gap:12px;align-items:baseline;"><span style="color:#BF6A4A;" class="serif">→</span><span style="font-size:16px;color:#3A352E;">Мне важно, чтобы в итоге было что-то настоящее, а не красивое.</span></div>
+            <div style="display:flex;gap:12px;align-items:baseline;"><span style="color:#BF6A4A;" class="serif">→</span><span style="font-size:16px;color:#3A352E;">Помогаю не «разобраться с ИИ», а собрать себя так, чтобы ИИ работал на вас.</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ФИНАЛ ===== -->
+  <section id="final" style="background:#221F1B;color:#EDE7DA;">
+    <div style="max-width:900px;margin:0 auto;padding:120px 40px;text-align:center;">
+      <div class="mono" style="font-size:12px;letter-spacing:.14em;color:#D98A6A;text-transform:uppercase;margin-bottom:26px;">первый шаг</div>
+      <h2 class="serif" style="font-weight:400;font-size:56px;line-height:1.04;letter-spacing:-.015em;margin:0 0 26px;">Соберите себя в контекст. Дальше ИИ создаёт <span style="font-style:italic;color:#E3A07F;">из этого</span>.</h2>
+      <p style="font-size:19px;line-height:1.6;color:#A7A095;max-width:42ch;margin:0 auto 44px;text-wrap:pretty;">Начните с ИИ-паспорта за 1 900 ₽ — или приходите на Концепт-сессию, чтобы собрать всё вместе с Ириной.</p>
+      <div style="display:flex;align-items:center;justify-content:center;gap:20px;flex-wrap:wrap;">
+        <a href="https://t.me/vedi_vibe_ai_bot" class="btn-primary" style="display:inline-flex;align-items:center;gap:12px;background:#BF6A4A;color:#FBF6EE;text-decoration:none;font-weight:600;font-size:18px;padding:19px 36px;border-radius:40px;transition:background .2s;">Получить паспорт <span style="opacity:.72;font-weight:400;">· 1 900 ₽</span></a>
+        <a href="#dva-puti" style="display:inline-flex;align-items:center;color:#EDE7DA;text-decoration:none;font-weight:500;font-size:18px;border-bottom:1px solid rgba(237,231,218,.4);padding-bottom:2px;">Концепт-сессия · 50 000 ₽</a>
+      </div>
+      <div class="mono" style="font-size:12px;color:#6E665A;margin-top:34px;letter-spacing:.05em;">оплата и доступ — через Telegram-бота</div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer style="background:#1A1815;color:#8A8174;">
+    <div style="max-width:1180px;margin:0 auto;padding:34px 40px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;">
+      <div style="display:flex;align-items:center;gap:11px;">
+        <div style="width:9px;height:9px;border-radius:50%;background:#BF6A4A;"></div>
+        <span class="serif" style="font-size:15px;color:#C9C1B4;">ИИ-паспорт</span>
+      </div>
+      <span class="mono" style="font-size:11px;letter-spacing:.05em;">из размытости — в цифровую форму · Веди Вайб</span>
+    </div>
+  </footer>
+
+</div>
 </body>
 </html>
+
+
