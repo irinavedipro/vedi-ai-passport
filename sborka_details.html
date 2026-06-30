@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Веди Вайб — что входит в сборку</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap');
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: 'Inter', sans-serif;
+    background: #f2ece0;
+    color: #2a2723;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .screen {
+    width: 100%;
+    max-width: 460px;
+    padding: 36px 28px 28px;
+  }
+  .brand {
+    font-size: 11px; letter-spacing: .2em; text-transform: uppercase;
+    color: #9a8f7e; margin-bottom: 8px;
+  }
+  .badge {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: #2a2723; color: #f2ece0;
+    font-size: 11px; letter-spacing: .04em; padding: 6px 14px;
+    border-radius: 100px; margin-bottom: 24px; width: fit-content;
+  }
+  .badge .dot { width: 6px; height: 6px; border-radius: 50%; background: #7fd87f; flex-shrink: 0; }
+
+  h1 {
+    font-size: 27px; font-weight: 400; line-height: 1.28;
+    letter-spacing: -.01em; margin-bottom: 14px;
+  }
+  h1 em { font-style: italic; color: #c98a52; }
+  .sub { font-size: 15px; line-height: 1.6; color: #5c574d; margin-bottom: 28px; }
+
+  .section-label {
+    font-size: 10px; letter-spacing: .14em; text-transform: uppercase;
+    color: #b5ab97; margin: 28px 0 14px;
+  }
+
+  .step {
+    background: #fff; border: 1px solid #e2d7c6; border-radius: 14px;
+    padding: 18px 20px; margin-bottom: 12px;
+    display: flex; gap: 14px; align-items: flex-start;
+  }
+  .step .num {
+    font-size: 13px; color: #c98a52; font-weight: 500;
+    flex-shrink: 0; padding-top: 1px;
+  }
+  .step .text { font-size: 14px; line-height: 1.55; }
+  .step .text b { font-weight: 500; }
+
+  .proof {
+    font-size: 13px; color: #5c574d; line-height: 1.6;
+    padding: 16px 18px; background: #fff;
+    border-left: 2px solid #d8a878; border-radius: 0 10px 10px 0;
+    margin-bottom: 8px;
+  }
+
+  .price-box {
+    background: #fff; border: 1.5px solid #c98a52; border-radius: 14px;
+    padding: 22px; margin: 28px 0 20px;
+  }
+  .price-box .label {
+    font-size: 10px; letter-spacing: .14em; text-transform: uppercase;
+    color: #c98a52; margin-bottom: 10px;
+  }
+  .price-box .big { font-size: 26px; font-weight: 500; margin-bottom: 10px; }
+  .price-box .note { font-size: 13px; color: #7a7468; line-height: 1.6; }
+
+  .honest {
+    background: #2a2723; color: #f2ece0; border-radius: 14px;
+    padding: 20px 22px; margin-bottom: 28px;
+  }
+  .honest .label {
+    font-size: 10px; letter-spacing: .14em; text-transform: uppercase;
+    color: #d8a878; margin-bottom: 10px;
+  }
+  .honest p { font-size: 13px; line-height: 1.65; margin-bottom: 6px; }
+
+  .cta {
+    display: block; text-align: center; background: #2a2723; color: #f2ece0;
+    text-decoration: none; padding: 17px 24px; border-radius: 100px;
+    font-size: 15px; font-weight: 500; margin-bottom: 24px;
+  }
+
+  .footer-brand {
+    text-align: center; font-size: 11px; letter-spacing: .12em;
+    text-transform: uppercase; color: #b5ab97;
+  }
+</style>
+</head>
+<body>
+<div class="screen">
+
+  <div class="brand">Веди Вайб · Ирина Вединеева</div>
+  <div class="badge"><span class="dot"></span>июльский набор · 6 мест свободно</div>
+
+  <h1>Что входит<br>в <em>сборку</em></h1>
+  <p class="sub">Берём идею которая ещё не до конца оформлена и за один день доводим её до первой рабочей версии.</p>
+
+  <div class="section-label">что соберём за день</div>
+
+  <div class="step">
+    <div class="num">01</div>
+    <div class="text"><b>Идея и оффер.</b> Достаём из головы главное: что это, для кого, зачем, какой результат человек получит.</div>
+  </div>
+  <div class="step">
+    <div class="num">02</div>
+    <div class="text"><b>Сайт или приложение.</b> Страница, на которую уже можно дать ссылку — объясняет идею и ведёт человека дальше.</div>
+  </div>
+  <div class="step">
+    <div class="num">03</div>
+    <div class="text"><b>Telegram-бот.</b> Ведёт человека по простому маршруту: посмотреть, понять, оставить заявку.</div>
+  </div>
+  <div class="step">
+    <div class="num">04</div>
+    <div class="text"><b>Путь до заявки.</b> Связываем всё в короткую воронку — от первого касания до контакта с вами.</div>
+  </div>
+
+  <div class="section-label">уже делала похожее</div>
+  <div class="proof">Сайты, приложения и telegram-боты для разных экспертов — включая Гулю из BK Главбух и Свету из Clover Voice.</div>
+
+  <div class="price-box">
+    <div class="label">как начать</div>
+    <div class="big">Навигационный разбор</div>
+    <div class="note">45 минут — смотрим где застряла идея и какой формат вам нужен. Если идём дальше в полную сборку — стоимость разбора засчитывается в сборку.</div>
+  </div>
+
+  <div class="honest">
+    <div class="label">честно</div>
+    <p>Не обещаю готовый бизнес за один день.</p>
+    <p>Не обещаю мгновенные продажи после сайта.</p>
+    <p>Не обещаю что ИИ сделает всё сам.</p>
+    <p>Собираю первую версию — ту, которую уже можно показать живым людям и проверить.</p>
+  </div>
+
+  <a href="https://t.me/vedi_vibe_ai_bot" class="cta">Записаться на разбор</a>
+
+  <div class="footer-brand">идея становится формой</div>
+
+</div>
+</body>
+</html>
